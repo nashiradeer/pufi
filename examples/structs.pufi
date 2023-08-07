@@ -1,0 +1,27 @@
+public struct AllPufiTypes {
+    // Public Primitives
+    public string_variable: string;
+    public integer_variable: integer;
+    public float_variable: decimal;
+    public char_variable: char;
+    public bool_variable: bool;
+
+    // Private Array
+    string_array_variable: string[6];
+    integer_array_variable: integer[6];
+    float_array_variable: decimal[6];
+    char_array_variable: char[6];
+    bool_array_variable: bool[6];
+
+    // Public Structs
+    public vector_char: List<char>;
+    public map_key_value: Map<string, string>;
+}
+
+public struct StructWithGeneric<T> {
+    public generic: T,
+}
+
+public struct StructWithTypedGeneric<T: Read + Write> {
+    public generic: T,
+}
