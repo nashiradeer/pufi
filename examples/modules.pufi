@@ -2,6 +2,7 @@ import std.fs.File as OsFile;
 import std.io.Write;
 import std.io.Read;
 import std.xio.WriteExt;
+import std.array.count_items;
 
 @entry
 pub func main() {
