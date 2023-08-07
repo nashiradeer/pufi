@@ -1,0 +1,36 @@
+public struct User {
+    public name: string;
+    public id: integer;
+    public age: integer;
+}
+
+public function new(name: string, age: integer): User {
+    return {
+        id: 0,
+        name,
+        age
+    };
+}
+
+public function (self: &User) is_under_age(): bool {
+    return self.age < 18;
+}
+
+public function (self: mutable &User) set_name(name: string) {
+    self.name = name;
+}
+
+public function (self: &User) copy_name(out: mutable &string) {
+    out = self.name;
+}
+
+public function main() {
+    const user = new User("Johnny", 18);
+
+    if user.is_under_age() {
+        print("User is under age");
+    }
+
+    var name = "variable/mutable name";
+    user.copy_name(name);
+}
