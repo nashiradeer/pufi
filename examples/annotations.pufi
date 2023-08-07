@@ -14,3 +14,6 @@ pub enum Option<T> {
 
 @disableClone
 pub struct CantBeCloned { }
+
+@runtimeOnly
+pub func open_file(path: string): File;
