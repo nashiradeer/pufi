@@ -29,7 +29,7 @@ pub func main() {
     const user = new User("Johnny", 18);
 
     if user.is_under_age() {
-        print("User is under age");
+        println("User is under age");
     }
 
     var name = "variable/mutable name";
