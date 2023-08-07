@@ -7,11 +7,11 @@ pub struct AllPufiTypes {
     pub single_bool: bool;
 
     // Private Array
-    string_array: string[6];
-    integer_array: integer[6];
-    float_array: float[6];
-    char_array: char[6];
-    bool_array: bool[6];
+    string_array: string[128];
+    integer_array: integer[128];
+    float_array: float[128];
+    char_array: char[128];
+    bool_array: bool[128];
 
     // Public Structs
     pub char_list: List<char>;
