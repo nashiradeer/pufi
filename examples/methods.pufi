@@ -1,0 +1,37 @@
+pub struct User {
+    pub id: integer;
+    pub name: string;
+
+    age: integer;
+}
+
+pub func new(name: string, age: integer): User {
+    return {
+        id: 0,
+        name,
+        age
+    };
+}
+
+pub func (self: &User) is_under_age(): bool {
+    return self.age < 18;
+}
+
+pub func (self: var &User) set_name(name: string) {
+    self.name = name;
+}
+
+pub func (self: &User) copy_name(out: var &string) {
+    out = self.name;
+}
+
+pub func main() {
+    const user = new User("Johnny", 18);
+
+    if user.is_under_age() {
+        println("User is under age");
+    }
+
+    var name = "variable/mutable name";
+    user.copy_name(name);
+}
