@@ -3,7 +3,7 @@ pub interface Read {
 }
 
 pub interface Write {
-    func (self: var &Read) write(buffer: &byte[], offset: integer, size: integer): integer;
+    func (self: var &Write) write(buffer: &byte[], offset: integer, size: integer): integer;
 }
 
 pub struct File {
