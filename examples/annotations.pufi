@@ -1,0 +1,16 @@
+@forceUsage
+@optionalClone
+pub enum Result<T, E> {
+    Ok(T),
+    Err(E)
+}
+
+@forceUsage
+@optionalClone
+pub enum Option<T> {
+    Some(T),
+    None
+}
+
+@disableClone
+pub struct CantBeCloned { }
