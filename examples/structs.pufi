@@ -14,7 +14,7 @@ public struct AllPufiTypes {
     bool_array_variable: bool[6];
 
     // Public Structs
-    public vector_char: List<char>;
+    public list_char: List<char>;
     public map_key_value: Map<string, string>;
 }
 
