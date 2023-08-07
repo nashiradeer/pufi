@@ -1,10 +1,10 @@
-public struct AllPufiTypes {
+pub struct AllPufiTypes {
     // Public Primitives
-    public string_variable: string;
-    public integer_variable: integer;
-    public float_variable: float;
-    public char_variable: char;
-    public bool_variable: bool;
+    pub string_variable: string;
+    pub integer_variable: integer;
+    pub float_variable: float;
+    pub char_variable: char;
+    pub bool_variable: bool;
 
     // Private Array
     string_array_variable: string[6];
@@ -14,14 +14,14 @@ public struct AllPufiTypes {
     bool_array_variable: bool[6];
 
     // Public Structs
-    public list_char: List<char>;
-    public map_key_value: Map<string, string>;
+    pub list_char: List<char>;
+    pub map_key_value: Map<string, string>;
 }
 
-public struct StructWithGeneric<T> {
-    public generic: T,
+pub struct StructWithGeneric<T> {
+    pub generic: T,
 }
 
-public struct StructWithTypedGeneric<T: Read + Write> {
-    public generic: T,
+pub struct StructWithTypedGeneric<T: Read + Write> {
+    pub generic: T,
 }
