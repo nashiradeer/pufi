@@ -18,10 +18,20 @@ pub struct AllPufiTypes {
     pub map_key_value: Map<string, string>;
 }
 
-pub struct StructWithGeneric<T> {
-    pub generic: T,
+pub struct List<T> {
+    pub items: T[4096];
+    pub count: integer;
 }
 
-pub struct StructWithTypedGeneric<T: Read + Write> {
-    pub generic: T,
+pub struct Map<K, V> {
+    pub keys: K[4096];
+    pub values: V[4096];
+    pub count: integer;
+}
+
+// is expected that V will have the functions from Read and Write.
+pub struct ReadWriteMap<K, V: Read + Write> {
+    pub keys: K[4096];
+    pub values: V[4096];
+    pub count: integer;
 }
