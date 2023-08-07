@@ -1,21 +1,21 @@
 pub struct AllPufiTypes {
     // Public Primitives
-    pub string_variable: string;
-    pub integer_variable: integer;
-    pub float_variable: float;
-    pub char_variable: char;
-    pub bool_variable: bool;
+    pub single_string: string;
+    pub single_integer: integer;
+    pub single_float: float;
+    pub single_char: char;
+    pub single_bool: bool;
 
     // Private Array
-    string_array_variable: string[6];
-    integer_array_variable: integer[6];
-    float_array_variable: float[6];
-    char_array_variable: char[6];
-    bool_array_variable: bool[6];
+    string_array: string[6];
+    integer_array: integer[6];
+    float_array: float[6];
+    char_array: char[6];
+    bool_array: bool[6];
 
     // Public Structs
-    pub list_char: List<char>;
-    pub map_key_value: Map<string, string>;
+    pub char_list: List<char>;
+    pub string_map: Map<string, string>;
 }
 
 pub struct List<T> {
