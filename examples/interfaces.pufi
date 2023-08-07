@@ -1,0 +1,41 @@
+pub interface Read {
+    func (self: var &Read) read(buffer: var &byte[], offset: integer, size: integer): integer;
+}
+
+pub interface Write {
+    func (self: var &Read) write(buffer: &byte[], offset: integer, size: integer): integer;
+}
+
+pub struct File {
+    pub file_name: string;
+}
+
+pub func new(name: string): File {
+    return {
+        file_name: name
+    };
+}
+
+pub func (file: var &File) read(buffer: var &byte[], offset: integer, size: integer): integer {
+    // implement read
+}
+
+pub func (file: var &File) write(buffer: &byte[], offset: integer, size: integer): integer {
+    // implement write
+}
+
+pub interface ReadExtension {
+    func (self: var &Read) read_all(): List<byte> {
+        var buffer = new List<byte>;
+        var continue = false;
+
+        do {
+            var temp_buffer: byte[256] = [];
+            const count = self.read(temp_buffer, 0, 256);
+            buffer.extend(temp_buffer, count);
+            continue = count == 256;
+        } while (continue);
+
+        return buffer;
+    }
+}
