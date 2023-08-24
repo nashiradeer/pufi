@@ -27,8 +27,8 @@ pub func User::copy_name(&self: User, out: &var string) {
 
 @Entry
 pub func main() {
-    const user = new User("Johnny", 18);
-    var user2 = new User("Robert", 20);
+    const user = User::new("Johnny", 18);
+    var user2 = User::new("Robert", 20);
 
     if user.is_under_age() {
         println("User is under age");
