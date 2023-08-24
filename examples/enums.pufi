@@ -4,13 +4,14 @@ pub enum Result<T, E> {
 }
 
 pub enum Option<T> {
-    Some(T),
-    None
+    None,
+    Some(T)
 }
 
 pub enum Operations {
     Add = 0,
     Subtract = 1,
     Multiply = 2,
-    Division = 3
+    Division = 3,
+    Number(integer) = 4
 }
