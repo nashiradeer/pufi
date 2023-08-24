@@ -37,3 +37,5 @@ pub struct ReadWriteMap<K, V: Read + Write> {
     pub values: V[4096];
     pub count: integer;
 }
+
+pub struct TupleLike(string, integer);
