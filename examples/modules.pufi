@@ -1,13 +1,14 @@
 import std.fs.File as OsFile;
 import std.io.Write;
 import std.io.Read;
-import std.xio.WriteExt;
 import std.array.count_items;
+import std.bin.Entry;
 
-@entry
+@Entry
 pub func main() {
     var file = new OsFile("file.txt");
     var file2 = new OsFile("file2.txt);
 
-    file2.write_from_read(file);
+    const buffer = file.read_all();
+    file2.write_all(buffer);
 }
