@@ -25,6 +25,7 @@ pub func User::copy_name(&self: User, out: &var string) {
     out = self.name;
 }
 
+@Entry
 pub func main() {
     const user = new User("Johnny", 18);
     var user2 = new User("Robert", 20);
