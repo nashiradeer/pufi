@@ -1,0 +1,39 @@
+func if_else() {
+    if 1 == 1 {
+
+    } else if 2 >= 1 {
+
+    } else {
+
+    }
+}
+
+func switch() {
+    const n = 1;
+
+    match n {
+        0 => {
+            return "zero";
+        }
+
+        1 => {
+            return "one";
+        }
+
+        2 => {
+            return "two";
+        }
+    }
+
+    const enum_with_data = Result<string, integer>::Ok("data");
+
+    match enum_with_data {
+        Ok(v) => {
+            println(v);
+        }
+
+        Err(e) => {
+            delete(e);
+        }
+    }
+}
