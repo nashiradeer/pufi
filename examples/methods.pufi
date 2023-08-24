@@ -5,7 +5,7 @@ pub struct User {
     age: integer;
 }
 
-pub func new(name: string, age: integer): User {
+pub func User::new(name: string, age: integer): User {
     return {
         id: 0,
         name,
@@ -13,20 +13,21 @@ pub func new(name: string, age: integer): User {
     };
 }
 
-pub func (self: &User) is_under_age(): bool {
+pub func User::is_under_age(self: &User): bool {
     return self.age < 18;
 }
 
-pub func (self: var &User) set_name(name: string) {
+pub func User::set_name(self: &var User, name: string) {
     self.name = name;
 }
 
-pub func (self: &User) copy_name(out: var &string) {
+pub func User::copy_name(&self: User, out: &var string) {
     out = self.name;
 }
 
 pub func main() {
     const user = new User("Johnny", 18);
+    var user2 = new User("Robert", 20);
 
     if user.is_under_age() {
         println("User is under age");
@@ -34,4 +35,5 @@ pub func main() {
 
     var name = "variable/mutable name";
     user.copy_name(name);
+    user2.set_name(name);
 }
