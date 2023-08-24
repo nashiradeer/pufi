@@ -1,19 +1,32 @@
-@forceUsage
-@optionalClone
+// Compiler Annotations - These annotations serve to instruct the compiler what it can or should do with the object below.
+
+@ForceUsage
+@OptionalClone
+@OptionalCopy
 pub enum Result<T, E> {
     Ok(T),
     Err(E)
 }
 
-@forceUsage
-@optionalClone
+@ForceUsage
+@OptionalClone
+@OptionalCopy
 pub enum Option<T> {
     Some(T),
     None
 }
 
-@disableClone
-pub struct CantBeCloned { }
+@Clone
+pub struct CanClone { }
 
-@runtimeOnly
+@RuntimeOnly
 pub func open_file(path: string): File;
+
+// Runtime Annotations - These annotations are defined by the SDK used and serve to mark certain functions or structures to be found more easily during Runtime.
+
+pub annon Entry = func;
+
+@Entry
+pub func main() {
+
+}
