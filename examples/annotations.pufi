@@ -1,19 +1,17 @@
-@forceUsage
-@optionalClone
+@NoIgnore
 pub enum Result<T, E> {
     Ok(T),
     Err(E)
 }
 
-@forceUsage
-@optionalClone
+@NoIgnore
 pub enum Option<T> {
     Some(T),
     None
 }
 
-@disableClone
+@NoClone
 pub struct CantBeCloned { }
 
-@runtimeOnly
+@Runtime
 pub func open_file(path: string): File;
