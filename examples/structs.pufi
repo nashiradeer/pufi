@@ -3,7 +3,6 @@ pub struct AllPufiTypes {
     pub single_string: string;
     pub single_integer: integer;
     pub single_float: float;
-    pub single_char: char;
     pub single_bool: bool;
     pub single_byte: byte;
 
@@ -11,12 +10,11 @@ pub struct AllPufiTypes {
     string_array: string[128];
     integer_array: integer[128];
     float_array: float[128];
-    char_array: char[128];
     bool_array: bool[128];
     byte_array: byte[128];
 
     // Public Structs
-    pub char_list: List<char>;
+    pub byte_list: List<byte>;
     pub string_map: Map<string, string>;
 }
 
