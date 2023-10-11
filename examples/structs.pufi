@@ -1,14 +1,14 @@
 pub struct AllPufiTypes {
     // Public Primitives
     pub single_string: string;
-    pub single_integer: integer;
+    pub single_integer: int;
     pub single_float: float;
     pub single_bool: bool;
     pub single_byte: byte;
 
     // Private Array
     string_array: string[128];
-    integer_array: integer[128];
+    integer_array: int[128];
     float_array: float[128];
     bool_array: bool[128];
     byte_array: byte[128];
@@ -20,18 +20,18 @@ pub struct AllPufiTypes {
 
 pub struct List<T> {
     pub items: T[4096];
-    pub count: integer;
+    pub count: int;
 }
 
 pub struct Map<K, V> {
     pub keys: K[4096];
     pub values: V[4096];
-    pub count: integer;
+    pub count: int;
 }
 
 // is expected that V will have the functions from Read and Write.
 pub struct ReadWriteMap<K, V: Read + Write> {
     pub keys: K[4096];
     pub values: V[4096];
-    pub count: integer;
+    pub count: int;
 }

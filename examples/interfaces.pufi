@@ -1,9 +1,9 @@
 pub interface Read {
-    func (self: var &Read) read(buffer: var &byte[], offset: integer, size: integer): integer;
+    func (self: var &Read) read(buffer: var &byte[], offset: int, size: int): int;
 }
 
 pub interface Write {
-    func (self: var &Write) write(buffer: &byte[], offset: integer, size: integer): integer;
+    func (self: var &Write) write(buffer: &byte[], offset: int, size: int): int;
 }
 
 pub struct File {
@@ -16,11 +16,11 @@ pub func new(name: string): File {
     };
 }
 
-pub func (file: var &File) read(buffer: var &byte[], offset: integer, size: integer): integer {
+pub func (file: var &File) read(buffer: var &byte[], offset: int, size: int): int {
     // implement read
 }
 
-pub func (file: var &File) write(buffer: &byte[], offset: integer, size: integer): integer {
+pub func (file: var &File) write(buffer: &byte[], offset: int, size: int): int {
     // implement write
 }
 

@@ -1,8 +1,8 @@
 pub struct User {
-    pub id: integer;
+    pub id: int;
     pub name: string;
 
-    age: integer;
+    age: int;
 }
 
 pub func new(name: string, age: integer): User {
